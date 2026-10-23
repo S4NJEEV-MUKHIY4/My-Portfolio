@@ -2829,3 +2829,21 @@ button {
     max-height: 65vh;
   }
 }
+
+#activeVideo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #000;
+}
+
+.video-modal-dialog {
+  width: min(100%, 1000px);
+}
+
+@media (max-width: 600px) {
+  .video-modal-dialog {
+    width: 100%;
+  }
+}

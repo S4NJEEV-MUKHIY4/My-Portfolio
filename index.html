@@ -320,7 +320,7 @@
 <article
   class="work-card video-edit-card"
   data-category="video"
-  data-video="assets/video1.mp4"
+  data-video="https://drive.google.com/file/d/1kxAdHALYLAD9KjWVIHfTm-BptNsBQD1T/preview"
   tabindex="0"
   role="button"
   aria-label="Play first video edit"
@@ -363,7 +363,7 @@
 <article
   class="work-card video-edit-card"
   data-category="video"
-  data-video="assets/video2.mp4"
+  data-video="https://drive.google.com/file/d/1SXpBk55j2kpbj_P9KYfq-Z4teqXD5oRq/preview"
   tabindex="0"
   role="button"
   aria-label="Play second video edit"
@@ -800,14 +800,33 @@
 
   </main>
     <!-- Video Popup -->
-  <div class="video-modal" id="videoModal" aria-hidden="true">
-    <div class="video-modal-backdrop" data-video-close></div>
 
-    <div class="video-modal-dialog" role="dialog" aria-modal="true" aria-label="Video player">
-      <button class="video-modal-close" type="button" data-video-close aria-label="Close video">×</button>
-      <video id="activeVideo" controls playsinline preload="metadata"></video>
-    </div>
+<div class="video-modal" id="videoModal" aria-hidden="true">
+  <div class="video-modal-backdrop" data-video-close></div>
+
+  <div
+    class="video-modal-dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Video player"
+  >
+    <button
+      class="video-modal-close"
+      type="button"
+      data-video-close
+      aria-label="Close video"
+    >×</button>
+
+    <iframe
+      id="activeVideo"
+      title="Portfolio video player"
+      src=""
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen
+    ></iframe>
   </div>
+</div>
+
 
 </body>
 </html>

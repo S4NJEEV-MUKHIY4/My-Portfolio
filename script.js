@@ -244,20 +244,30 @@ const videoCards = document.querySelectorAll(".video-edit-card");
 const videoModal = document.getElementById("videoModal");
 const activeVideo = document.getElementById("activeVideo");
 
+
 function openVideo(card) {
   const source = card.dataset.video;
 
   if (!source || !videoModal || !activeVideo) return;
 
   activeVideo.src = source;
+
   videoModal.classList.add("is-open");
   videoModal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
-
-  activeVideo.play().catch(() => {
-    // User can press Play if autoplay is blocked.
-  });
 }
+
+function closeVideo() {
+  if (!videoModal || !activeVideo) return;
+
+  // Stop the video when the popup closes
+  activeVideo.src = "";
+
+  videoModal.classList.remove("is-open");
+  videoModal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
 
 function closeVideo() {
   if (!videoModal || !activeVideo) return;
